@@ -1,0 +1,85 @@
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  width: 100%; 
+  box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox-box {
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border: 1px solid #CDCDCD; 
+  display: inline-block;
+  position: relative;
+  border-radius: 6px;
+  box-sizing: border-box; 
+  transition: border-color 0.2s, box-shadow 0.2s; 
+}
+
+.custom-checkbox-box:hover {
+  border: 1px solid #BDBDBD; 
+}
+
+.custom-checkbox-box::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 13px;
+  border: solid #E3E3E3; 
+  border-width: 0 1px 1px 0; 
+  transform: rotate(45deg);
+  left: 7px;
+  top: 1.5px;
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-box {
+  background-color: #2469F6;
+  border-color: transparent; 
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-box::after {
+  display: block;
+  border-color: white; 
+}
+
+.custom-checkbox-box:hover::after {
+  display: block;
+  border-color: #E3E3E3; 
+}
+
+
+.custom-checkbox input[type="checkbox"]:not(:checked):active + .custom-checkbox-box::after {
+  display: block;
+  border-color: #878787; 
+}
+
+
+.custom-checkbox input[type="checkbox"]:not(:checked):active + .custom-checkbox-box {
+  box-shadow: 0 0 0 2px rgba(181, 201, 242, 0.5); 
+}
+
+@keyframes highlight {
+  0% {
+    background-color: white;
+    border-color: #2469F6; 
+  }
+  100% {
+    background-color: #2469F6;
+  }
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-box:hover {
+  background-color: #5087F8; 
+}

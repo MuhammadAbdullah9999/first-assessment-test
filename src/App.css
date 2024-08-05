@@ -1,0 +1,42 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.2px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
+  height: 306px;
+  margin: auto;
+  margin-top: 85px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #EEEEEE;
+  box-shadow: 
+    0 8px 15px 0 rgba(20, 20, 20, 0.12),
+    0 0 4px 0 rgba(20, 20, 20, 0.10);
+  gap: 12px; 
+}
+.checkbox-container {
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 20px;
+height: 164px;
+overflow-y: auto;
+padding: 2px 8px;
+}
+.checkbox-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+}
+hr {
+  width: 340px;
+  border: 0;
+  border-top: 0.7px solid #CDCDCD;
+  margin: 6px 0; 
+  padding: 0px 15px 0px 15px
+}
